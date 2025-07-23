@@ -34,7 +34,7 @@ class ForegroundService : Service() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val channel = NotificationChannel(
                 CHANNEL_ID,
-                "Notification Catcher",
+                "Notification By Yony",
                 NotificationManager.IMPORTANCE_LOW
             ).apply {
                 description = "Canal para servicio en primer plano"
@@ -59,7 +59,7 @@ class ForegroundService : Service() {
 
     private fun buildNotification(): Notification {
         return NotificationCompat.Builder(this, CHANNEL_ID).apply {
-            setContentTitle("Notification Catcher")
+            setContentTitle("Notification By Yony")
             setContentText("Capturando notificaciones...")
             setSmallIcon(R.drawable.ic_notification) // ¡Verifica que este recurso existe!
             setPriority(NotificationCompat.PRIORITY_LOW)
